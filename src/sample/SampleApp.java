@@ -29,22 +29,22 @@ public class SampleApp {
             //TODO ID do Avalie 07 - "avalie07";
             //TODO ID do Avalie 08 - "avalie08";
             //TODO ID do Avalie 09 - "avalie09";
-            "avalie06";
+            "avalie08";
 
     /**
      * The JSON credential file for the service account.
      */
     private static final String SERVICE_ACCOUNT_CREDENTIAL_FILE =
-            //TODO Credencial Turismo - "C:\Users\hector.henrique\Desktop\Provisionamento\src\Credential\lapinworkturismo-f840c4aa2783.json";
-            //TODO Credencial Avalie01 - "C:\Users\hector.henrique\Desktop\Provisionamento\src\Credential\avalie01-f0210efb1523.json";
-            //TODO Credencial Avalie03 - "C:\Users\hector.henrique\Desktop\Provisionamento\src\Credential\avalie03-213613-9e1ceb2154e8.json";
-            //TODO Credencial Avalie 04 - "C:\Users\hector.henrique\Desktop\Provisionamento\src\Credential\avalie04-221611-8cf72f260281.json";
-            //TODO Credencial Avalie 05 - "C:\Users\hector.henrique\Desktop\Provisionamento\src\Credential\avalie05-e70255ec9d31.json"
-            //TODO Credencial Avalie 06 - "C:\Users\hector.henrique\Desktop\Provisionamento\src\Credential\avalie06-39154aec0713.json";
-            //TODO Credencial Avalie 07 - "C:\Users\hector.henrique\Desktop\Provisionamento\src\Credential\avalie07-deb5e80a7a6f.json"
-            //TODO Credencial Avalie 08 - "C:\Users\hector.henrique\Desktop\Provisionamento\src\Credential\avalie08-dd8c9ce45489.json"
-            //TODO Credencial Avalie 09 - C:\\Users\\mateu\\Documents\\Provisionamento\\src\\Credential\\avalie09-241218-fd54025c1717.json
-            "C:\\Users\\hector.henrique\\Desktop\\Provisionamento\\src\\Credential\\avalie06-39154aec0713.json";
+            //TODO Credencial Turismo - "home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/lapinworkturismo-f840c4aa2783.json";
+            //TODO Credencial Avalie01 - "home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie01-f0210efb1523.json";
+            //TODO Credencial Avalie03 - "home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie03-213613-9e1ceb2154e8.json";
+            //TODO Credencial Avalie 04 - "home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie04-221611-8cf72f260281.json";
+            //TODO Credencial Avalie 05 - "home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie05-e70255ec9d31.json"
+            //TODO Credencial Avalie 06 - "home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie06-39154aec0713.json";
+            //TODO Credencial Avalie 07 - "home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie07-deb5e80a7a6f.json"
+            //TODO Credencial Avalie 08 - "home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie08-dd8c9ce45489.json"
+            //TODO Credencial Avalie 09 - home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie09-241218-fd54025c1717.json
+            "/home/gabriel/Workspaces/Java/avalie-provisionamento/src/Credential/avalie08-dd8c9ce45489.json";
 
 
     /**
@@ -60,7 +60,7 @@ public class SampleApp {
             //TODO Nome da Policy Avalie07 - "PolicyAvalie07"
             //TODO Nome da Policy Avalie08 - "PolicyAvalie08";
             //TODO Nome da Policy Avalie09 - "PolicyAvalie09";
-      "PolicyAvalie06";
+      "PolicyAvalie08";
 
     /**
      * The package name of the COSU app.
@@ -121,7 +121,7 @@ public class SampleApp {
         //TODO Empresa do Avalie 07 "enterprises/LC02upbxam";
         //TODO Empresa do Avalie 08 "enterprises/LC03sf0185";
         //TODO Empresa do Avalie 09 "enterprises/";
-        "enterprises/LC03u43jxw";
+        "enterprises/LC03sf0185";
         System.out.println("Enterprise created with name: " + enterpriseName);
 
         // Set the policy to be used by the device.
@@ -147,9 +147,10 @@ public class SampleApp {
         List<Device> devices = listDevices(enterpriseName);
         for (Device device : devices) {
 //            device.getDeviceSettings().setDevelopmentSettingsEnabled(true);2.660
-            System.out.println(device.getHardwareInfo().getSerialNumber());
-            System.out.println("Device Name:" + device.getName());
-            System.out.println("Policy Name :  " + device.getAppliedPolicyName() + "\nPolicy Version : " + device.getAppliedPolicyVersion());
+            System.out.println("------------------------------------------------------------");
+            System.out.println("Numero de serie: " + device.getHardwareInfo().getSerialNumber());
+            System.out.println("Device Name: " + device.getName());
+            System.out.println("Policy Name:  " + device.getAppliedPolicyName() + "\nPolicy Version : " + device.getAppliedPolicyVersion());
             System.out.println("Última sincronização de policy: "+ device.getLastPolicySyncTime());
             System.out.println("Último report: " + device.getLastStatusReportTime());
 //            System.out.println(device.getDeviceSettings().getDevelopmentSettingsEnabled());
